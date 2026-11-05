@@ -11,3 +11,10 @@ export type IconPropsType = {
 	size?: number;
 	style?: CSSProperties;
 };
+
+export type HowToStepsPropsType = {
+	number: number;
+	name: IconName;
+	title: string;
+	description: string;
+};

@@ -3,6 +3,7 @@ import Icon from "../components/icon/Icon";
 import SearchPreview from "../components/search-preview/SearchPreview";
 import Header from "@/components/header/Header";
 import Hero from "@/components/hero/Hero";
+import HowItWorks from "@/components/how-it-works/HowItWorks";
 
 const repository: string = "https://github.com/NickChach/passagepin";
 const releases = `${repository}/releases`;
@@ -37,44 +38,7 @@ export default function Home() {
 			<main id="main">
 				<Hero />
 				<SearchPreview />
-				<section className="how-section container" id="how-it-works" aria-labelledby="how-title">
-					<div className="section-intro">
-						<h2 id="how-title">
-							From a folder of PDFs
-							<br />
-							to the right page.
-						</h2>
-						<p>Books, papers, reports, and all the things you saved for later. Put them to work in three steps.</p>
-					</div>
-					<div className="steps">
-						<article className="step">
-							<div className="step-top">
-								<span>1</span>
-								<Icon name="folder" size={25} />
-							</div>
-							<h3>Bring your library</h3>
-							<p>Choose a folder of PDFs. Keep separate libraries for different projects, subjects, or collections.</p>
-						</article>
-						<article className="step">
-							<div className="step-top">
-								<span>2</span>
-								<Icon name="search" size={25} />
-							</div>
-							<h3>Follow an idea</h3>
-							<p>
-								Index your library, then describe what you’re looking for. Search for a subject, not just an exact phrase.
-							</p>
-						</article>
-						<article className="step">
-							<div className="step-top">
-								<span>3</span>
-								<Icon name="document" size={25} />
-							</div>
-							<h3>Get back to reading</h3>
-							<p>Explore ranked pages and read their text beside the results. Open the original PDF in your own viewer.</p>
-						</article>
-					</div>
-				</section>
+				<HowItWorks />
 				<section className="privacy-section" aria-labelledby="privacy-title">
 					<div className="container privacy-inner">
 						<div className="privacy-copy">
