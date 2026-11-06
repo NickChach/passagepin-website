@@ -18,3 +18,20 @@ export type HowToStepsPropsType = {
 	title: string;
 	description: string;
 };
+
+export type FAQPropsType = {
+	repository: string;
+};
+
+export type QuestionObject = {
+	question: string;
+	answer: string;
+};
+
+export type DownloadPropsType = {
+	repository: string;
+};
+
+export type FooterPropsType = {
+	repository: string;
+};

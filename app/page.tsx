@@ -1,35 +1,13 @@
-import Image from "next/image";
-import Icon from "../components/icon/Icon";
 import SearchPreview from "../components/search-preview/SearchPreview";
 import Header from "@/components/header/Header";
 import Hero from "@/components/hero/Hero";
 import HowItWorks from "@/components/how-it-works/HowItWorks";
+import Privacy from "@/components/privacy/Privacy";
+import FAQ from "@/components/faq/FAQ";
+import Download from "@/components/download/Download";
+import Footer from "@/components/footer/Footer";
 
 const repository: string = "https://github.com/NickChach/passagepin";
-const releases = `${repository}/releases`;
-
-const questions = [
-	{
-		question: "Does PassagePin need an internet connection?",
-		answer: "The packaged desktop app includes the search model and runtime. After downloading the app, you can index and search your library offline. Your PDF contents and search queries stay on your computer.",
-	},
-	{
-		question: "Can I search scanned PDFs?",
-		answer: "PassagePin searches text contained in your PDFs. Image-only scans need OCR first, using a separate tool. Once a scan has a readable text layer, you can add it to your library and update the index.",
-	},
-	{
-		question: "Which languages does it work best with?",
-		answer: "The current search model is intended for English. Other languages may produce results, but their search quality has not been validated.",
-	},
-	{
-		question: "What happens when my files change?",
-		answer: "Use Check for changes in the app, then update your index. PassagePin processes added and changed PDFs, reuses work where it can, and removes deleted files from the index. You decide when to update.",
-	},
-	{
-		question: "Is it available for Windows or macOS?",
-		answer: "The current desktop packages target Linux x86-64 with glibc 2.38 or newer. Windows and macOS packages have not yet been validated. Check GitHub Releases for the available builds.",
-	},
-];
 
 export default function Home() {
 	return (
@@ -39,165 +17,11 @@ export default function Home() {
 				<Hero />
 				<SearchPreview />
 				<HowItWorks />
-				<section className="privacy-section" aria-labelledby="privacy-title">
-					<div className="container privacy-inner">
-						<div className="privacy-copy">
-							<div className="privacy-icon">
-								<Icon name="lock" size={25} />
-							</div>
-							<h2 id="privacy-title">
-								Your reading.
-								<br />
-								Your computer.
-							</h2>
-							<p>
-								Your documents don’t need to go anywhere for you to find something in them. PassagePin indexes and searches
-								on your machine, with the search model included in the app.
-							</p>
-							<ul className="privacy-points">
-								<li>
-									<Icon name="check" size={17} />
-									No document uploads
-								</li>
-								<li>
-									<Icon name="check" size={17} />
-									No account or API key
-								</li>
-								<li>
-									<Icon name="check" size={17} />
-									Works offline after download
-								</li>
-							</ul>
-						</div>
-						<div className="local-illustration" aria-label="PDF documents and search stay together on your computer">
-							<div className="local-machine">
-								<div className="machine-top">
-									<span className="status-dot" />
-									Your computer
-									<Icon name="lock" size={15} />
-								</div>
-								<div className="machine-content">
-									<div className="mini-files">
-										<span>
-											<Icon name="document" size={22} />
-											Books
-										</span>
-										<span>
-											<Icon name="document" size={22} />
-											Papers
-										</span>
-										<span>
-											<Icon name="document" size={22} />
-											Reports
-										</span>
-									</div>
-									<div className="local-connector" aria-hidden="true">
-										<span />
-										<span />
-										<span />
-									</div>
-									<div className="local-app">
-										<Image src="/passagepin.svg" width={40} height={40} alt="" />
-										<div>
-											<strong>PassagePin</strong>
-											<span>A search engine for your library</span>
-										</div>
-										<Icon name="search" size={22} />
-									</div>
-									<p>Everything you need. Right here.</p>
-								</div>
-							</div>
-							<div className="machine-base" />
-						</div>
-					</div>
-				</section>
-				<section className="questions-section container" id="questions" aria-labelledby="questions-title">
-					<div>
-						<h2 id="questions-title">
-							A few things
-							<br />
-							you might be wondering.
-						</h2>
-						<p>
-							More details, build instructions, and the CLI live in the <a href={repository}>project documentation</a>.
-						</p>
-					</div>
-					<div className="questions-list">
-						{questions.map(({ question, answer }) => (
-							<details key={question}>
-								<summary>
-									{question}
-									<Icon name="plus" size={18} />
-								</summary>
-								<p>{answer}</p>
-							</details>
-						))}
-					</div>
-				</section>
-				<section className="download-section container" id="download" aria-labelledby="download-title">
-					<div className="download-panel">
-						<div className="download-copy">
-							<Image src="/passagepin.svg" width={56} height={56} alt="" />
-							<h2 id="download-title">
-								There’s more in your library.
-								<br />
-								Go find it.
-							</h2>
-							<p>Get PassagePin and give your PDFs a new way to be explored.</p>
-							<a className="button" href={releases}>
-								<Icon name="download" size={18} />
-								View Linux downloads
-							</a>
-							<p className="system-note">Linux x86-64 · glibc 2.38 or newer</p>
-						</div>
-						<div className="download-details">
-							<h3>Pick the package that suits you.</h3>
-							<div>
-								<span className="package-symbol">
-									<Icon name="download" size={21} />
-								</span>
-								<p>
-									<strong>AppImage</strong>
-									<span>
-										Make it executable, then launch.
-										<br />
-										Requires AppImage support, usually FUSE.
-									</span>
-								</p>
-							</div>
-							<div>
-								<span className="package-symbol">
-									<Icon name="folder" size={21} />
-								</span>
-								<p>
-									<strong>Compressed archive</strong>
-									<span>
-										Extract and run the included app.
-										<br />
-										An alternative without the FUSE requirement.
-									</span>
-								</p>
-							</div>
-							<a href={`${repository}#run-the-bundled-executable-linux-x86-64`} className="cli-link">
-								<Icon name="terminal" size={16} />
-								Prefer the terminal? There’s a CLI, too.
-								<Icon name="arrow" size={16} />
-							</a>
-						</div>
-					</div>
-				</section>
+				<Privacy />
+				<FAQ repository={repository} />
+				<Download repository={repository} />
 			</main>
-			<footer className="site-footer container">
-				<a href="#" className="brand">
-					<Image src="/passagepin.svg" width={28} height={28} alt="" />
-					<span>PassagePin</span>
-				</a>
-				<p>A little closer to what you’re looking for.</p>
-				<div>
-					<a href={repository}>Source code</a>
-					<a href={`${repository}/blob/main/LICENSE`}>MIT License</a>
-				</div>
-			</footer>
+			<Footer repository={repository} />
 		</>
 	);
 }
