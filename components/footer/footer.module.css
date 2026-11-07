@@ -1,0 +1,28 @@
+.footer {
+	display: flex;
+	align-items: center;
+	gap: 28px;
+	padding-block: 26px 35px;
+	border-top: 1px solid var(--border-soft);
+}
+
+.footer .brand {
+	font-size: 16px;
+}
+
+.footer > p {
+	color: var(--subtle);
+	font-size: 11px;
+}
+
+.footer > div {
+	margin-left: auto;
+	display: flex;
+	gap: 24px;
+	color: var(--muted);
+	font-size: 11px;
+}
+
+.footer a:hover {
+	color: #fff;
+}

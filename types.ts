@@ -19,19 +19,19 @@ export type HowToStepsPropsType = {
 	description: string;
 };
 
-export type FAQPropsType = {
-	repository: string;
-};
+export type FAQPropsType = HeaderPropsType;
 
 export type QuestionObject = {
 	question: string;
 	answer: string;
 };
 
-export type DownloadPropsType = {
-	repository: string;
-};
+export type DownloadPropsType = HeaderPropsType;
 
-export type FooterPropsType = {
-	repository: string;
+export type FooterPropsType = HeaderPropsType;
+
+export type LogoPropsType = {
+	width: number;
+	height: number;
+	priority: boolean;
 };

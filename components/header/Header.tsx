@@ -2,6 +2,7 @@ import type { HeaderPropsType } from "../../types";
 
 import Image from "next/image";
 import Icon from "../icon/Icon";
+import Logo from "../logo/Logo";
 
 export default function Header({ repository }: HeaderPropsType) {
 	return (
@@ -11,7 +12,7 @@ export default function Header({ repository }: HeaderPropsType) {
 					Skip to content
 				</a>
 				<a href="#" className="brand" aria-label="PassagePin home">
-					<Image src="images/passagepin.svg" width={36} height={36} alt="PassagePin logo." priority />
+					<Logo width={36} height={36} priority={true} />
 					<span>PassagePin</span>
 				</a>
 				<nav aria-label="Main navigation">
