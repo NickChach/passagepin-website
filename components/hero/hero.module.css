@@ -1,3 +1,47 @@
+.h1 {
+	font-size: clamp(46px, 5.4vw, 70px);
+	font-weight: 600;
+	letter-spacing: -3px;
+	line-height: 1.08;
+}
+
 .h1 span {
 	display: block;
+}
+
+.hero {
+	padding-top: 77px;
+	padding-bottom: 53px;
+	text-align: center;
+}
+
+.releaseNote {
+	color: var(--secondary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 9px;
+	font-size: 12px;
+	margin-bottom: 24px;
+}
+
+.heroDescription {
+	color: var(--secondary);
+	font-size: 16px;
+	line-height: 1.85;
+	margin: 24px auto 25px;
+	max-width: 610px;
+}
+
+.heroActions {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 27px;
+}
+
+.heroNote {
+	color: var(--subtle);
+	font-size: 11px;
+	margin-top: 16px;
 }

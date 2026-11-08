@@ -1,14 +1,13 @@
 import type { HeaderPropsType } from "../../types";
-
-import Image from "next/image";
 import Icon from "../icon/Icon";
 import Logo from "../logo/Logo";
+import styles from "./header.module.css";
 
 export default function Header({ repository }: HeaderPropsType) {
 	return (
-		<header className="site-header">
-			<div className="container header-inner">
-				<a className="skip-link" href="#main">
+		<header className={styles.header}>
+			<div className={`container ${styles.headerInner}`}>
+				<a id={styles.skipLink} href="#main">
 					Skip to content
 				</a>
 				<a href="#" className="brand" aria-label="PassagePin home">
@@ -18,7 +17,7 @@ export default function Header({ repository }: HeaderPropsType) {
 				<nav aria-label="Main navigation">
 					<a href="#how-it-works">How it works</a>
 					<a href="#questions">FAQs</a>
-					<a href={repository} className="github-nav">
+					<a href={repository} className={styles.github}>
 						<Icon name="github" size={17} />
 						GitHub
 					</a>

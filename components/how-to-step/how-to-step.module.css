@@ -1,0 +1,46 @@
+.step {
+	padding: 29px 39px 0;
+	border-right: 1px solid var(--border);
+}
+
+.step:first-child {
+	padding-left: 0;
+}
+
+.step:last-child {
+	border: 0;
+	padding-right: 0;
+}
+
+.stepTop {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	color: #93b1d4;
+	margin-bottom: 20px;
+}
+
+.stepTop > span {
+	font-size: 11px;
+	border: 1px solid var(--border);
+	width: 24px;
+	height: 24px;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	color: var(--muted);
+}
+
+.step h3 {
+	font-weight: 550;
+	font-size: 18px;
+	letter-spacing: -0.35px;
+	margin-bottom: 10px;
+}
+
+.step p {
+	color: var(--muted);
+	font-size: 13px;
+	line-height: 1.9;
+	max-width: 310px;
+}

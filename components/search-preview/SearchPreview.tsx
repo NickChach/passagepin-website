@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Icon from "../icon/Icon";
+import Logo from "../logo/Logo";
 
 const examples = [
 	{
@@ -157,7 +158,7 @@ export default function SearchPreview() {
 					<div className="app-body">
 						<aside className="app-sidebar" aria-label="Example library">
 							<div className="preview-brand">
-								<Image src="images/passagepin.svg" width={30} height={30} alt="Passagepin logo." />
+								<Logo width={30} height={30} priority={false} />
 								<strong>PassagePin</strong>
 							</div>
 							<div className="sidebar-label">Your library</div>

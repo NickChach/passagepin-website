@@ -12,7 +12,7 @@ export type IconPropsType = {
 	style?: CSSProperties;
 };
 
-export type HowToStepsPropsType = {
+export type HowToStepPropsType = {
 	number: number;
 	name: IconName;
 	title: string;
@@ -34,4 +34,11 @@ export type LogoPropsType = {
 	width: number;
 	height: number;
 	priority: boolean;
+};
+
+export type StepObject = {
+	number: number;
+	name: IconName;
+	title: string;
+	description: string;
 };

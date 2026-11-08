@@ -2,13 +2,14 @@ import Image from "next/image";
 import Icon from "../icon/Icon";
 import type { DownloadPropsType } from "@/types";
 import styles from "./download.module.css";
+import Logo from "../logo/Logo";
 
 export default function Download({ repository }: DownloadPropsType) {
 	return (
 		<section className="download-section container" id="download" aria-labelledby="download-title">
 			<div className="download-panel">
 				<div className="download-copy">
-					<Image src="images/passagepin.svg" width={56} height={56} alt="PassagePin logo." />
+					<Logo width={56} height={56} priority={false} />
 					<h2 id="download-title" className={styles.h2}>
 						<span>There’s more in your library.</span>
 						<span>Go find it.</span>

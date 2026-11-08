@@ -1,0 +1,45 @@
+.header {
+	border-bottom: 1px solid var(--border-soft);
+}
+
+#skipLink {
+	position: fixed;
+	top: -80px;
+	left: 20px;
+	z-index: 10;
+	background: var(--accent);
+	padding: 12px 20px;
+	border-radius: 6px;
+}
+
+#skipLink:focus {
+	top: 14px;
+}
+
+.headerInner {
+	height: 88px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 32px;
+}
+
+.headerInner nav {
+	display: flex;
+	gap: 32px;
+	margin-left: auto;
+	margin-right: 12px;
+	align-items: center;
+	color: var(--secondary);
+	font-size: 13px;
+}
+
+.headerInner nav a:hover {
+	color: #ffff;
+}
+
+.github {
+	display: inline-flex;
+	gap: 8px;
+	align-items: center;
+}

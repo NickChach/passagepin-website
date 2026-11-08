@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Icon from "../icon/Icon";
 import styles from "./privacy.module.css";
+import Logo from "../logo/Logo";
 
 export default function Privacy() {
 	return (
@@ -61,7 +62,7 @@ export default function Privacy() {
 								<span />
 							</div>
 							<div className="local-app">
-								<Image src="images/passagepin.svg" width={40} height={40} alt="PassagePin logo." />
+								<Logo width={40} height={40} priority={false} />
 								<div>
 									<strong>PassagePin</strong>
 									<span>A search engine for your library</span>
