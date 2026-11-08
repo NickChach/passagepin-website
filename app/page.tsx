@@ -1,11 +1,11 @@
 import SearchPreview from "../components/search-preview/SearchPreview";
-import Header from "@/components/header/Header";
-import Hero from "@/components/hero/Hero";
-import HowItWorks from "@/components/how-it-works/HowItWorks";
-import Privacy from "@/components/privacy/Privacy";
-import FAQ from "@/components/faq/FAQ";
-import Download from "@/components/download/Download";
-import Footer from "@/components/footer/Footer";
+import Header from "../components/header/Header";
+import Hero from "../components/hero/Hero";
+import HowItWorks from "../components/how-it-works/HowItWorks";
+import Privacy from "../components/privacy/Privacy";
+import FAQs from "../components/faqs/FAQs";
+import Download from "../components/download/Download";
+import Footer from "../components/footer/Footer";
 
 const repository: string = "https://github.com/NickChach/passagepin";
 
@@ -18,7 +18,7 @@ export default function Home() {
 				<SearchPreview />
 				<HowItWorks />
 				<Privacy />
-				<FAQ repository={repository} />
+				<FAQs repository={repository} />
 				<Download repository={repository} />
 			</main>
 			<Footer repository={repository} />

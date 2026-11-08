@@ -1,0 +1,63 @@
+.h2 span {
+	display: block;
+}
+
+.questionsSection {
+	display: grid;
+	grid-template-columns: 0.9fr 1.1fr;
+	gap: 90px;
+	padding-block: 90px;
+}
+
+.questionsSection > div:first-child > p {
+	color: var(--muted);
+	font-size: 13px;
+	line-height: 1.9;
+	margin-top: 22px;
+	max-width: 300px;
+}
+
+.questionsSection p a {
+	color: var(--accent-text);
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+.questionsList details {
+	border-bottom: 1px solid var(--border);
+}
+
+.questionsList details:first-child {
+	border-top: 1px solid var(--border);
+}
+
+.questionsList summary {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 18px;
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: 500;
+	padding: 20px 0;
+}
+
+.questionsList summary::-webkit-details-marker {
+	display: none;
+}
+
+.questionsList summary > svg {
+	color: var(--subtle);
+}
+
+.questionsList details[open] summary > svg {
+	transform: rotate(45deg);
+}
+
+.questionsList details > p {
+	font-size: 12px;
+	line-height: 1.9;
+	color: var(--muted);
+	padding: 0 27px 22px 0;
+}

@@ -1,14 +1,18 @@
-import Image from "next/image";
 import Icon from "../icon/Icon";
-import styles from "./privacy.module.css";
 import Logo from "../logo/Logo";
+import MiniFile from "../mini-file/MiniFile";
+import PrivacyPoint from "../privacy-point/PrivacyPoint";
+import styles from "./privacy.module.css";
 
 export default function Privacy() {
+	const privacyPoints: string[] = ["No document uploads", "No account or API key", "Works offline after download"];
+	const fileTypes: string[] = ["Books", "Papers", "Reports"];
+
 	return (
-		<article className="privacy-section" aria-labelledby="privacy-title">
-			<div className="container privacy-inner">
-				<section className="privacy-copy">
-					<div className="privacy-icon">
+		<article className={styles.privacySection} aria-labelledby="privacy-title">
+			<div className={`container ${styles.privacyInner}`}>
+				<section className={styles.privacyCopy}>
+					<div className={styles.privacyIcon}>
 						<Icon name="lock" size={25} />
 					</div>
 					<h2 id="privacy-title" className={styles.h2}>
@@ -19,49 +23,31 @@ export default function Privacy() {
 						Your documents don’t need to go anywhere for you to find something in them. PassagePin indexes and searches on your
 						machine, with the search model included in the app.
 					</p>
-					<ul className="privacy-points">
-						<li>
-							<Icon name="check" size={17} />
-							No document uploads
-						</li>
-						<li>
-							<Icon name="check" size={17} />
-							No account or API key
-						</li>
-						<li>
-							<Icon name="check" size={17} />
-							Works offline after download
-						</li>
+					<ul className={styles.privacyPoints}>
+						{privacyPoints.map((privacyPoint) => {
+							return <PrivacyPoint key={privacyPoint} privacyPoint={privacyPoint} />;
+						})}
 					</ul>
 				</section>
-				<section className="local-illustration" aria-label="PDF documents and search stay together on your computer">
-					<div className="local-machine">
-						<div className="machine-top">
+				<section className={styles.localIllustration} aria-label="PDF documents and search stay together on your computer">
+					<div className={styles.localMachine}>
+						<div className={styles.machineTop}>
 							<span className="status-dot" />
 							Your computer
 							<Icon name="lock" size={15} />
 						</div>
-						<div className="machine-content">
-							<div className="mini-files">
-								<span>
-									<Icon name="document" size={22} />
-									Books
-								</span>
-								<span>
-									<Icon name="document" size={22} />
-									Papers
-								</span>
-								<span>
-									<Icon name="document" size={22} />
-									Reports
-								</span>
+						<div className={styles.machineContent}>
+							<div className={styles.miniFiles}>
+								{fileTypes.map((fileType) => {
+									return <MiniFile key={fileType} type={fileType} />;
+								})}
 							</div>
-							<div className="local-connector" aria-hidden="true">
+							<div className={styles.localConnector} aria-hidden="true">
 								<span />
 								<span />
 								<span />
 							</div>
-							<div className="local-app">
+							<div className={styles.localApp}>
 								<Logo width={40} height={40} priority={false} />
 								<div>
 									<strong>PassagePin</strong>
@@ -72,7 +58,7 @@ export default function Privacy() {
 							<p>Everything you need. Right here.</p>
 						</div>
 					</div>
-					<div className="machine-base" />
+					<div className={styles.machineBase} />
 				</section>
 			</div>
 		</article>

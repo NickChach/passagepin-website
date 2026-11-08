@@ -12,6 +12,10 @@ export type IconPropsType = {
 	style?: CSSProperties;
 };
 
+export type PrivacyPointPropsType = {
+	privacyPoint: string;
+};
+
 export type HowToStepPropsType = {
 	number: number;
 	name: IconName;
@@ -19,12 +23,14 @@ export type HowToStepPropsType = {
 	description: string;
 };
 
-export type FAQPropsType = HeaderPropsType;
+export type FAQsPropsType = HeaderPropsType;
 
 export type QuestionObject = {
 	question: string;
 	answer: string;
 };
+
+export type QuestionPropsType = QuestionObject;
 
 export type DownloadPropsType = HeaderPropsType;
 
@@ -41,4 +47,8 @@ export type StepObject = {
 	name: IconName;
 	title: string;
 	description: string;
+};
+
+export type MiniFilePropsType = {
+	type: string;
 };

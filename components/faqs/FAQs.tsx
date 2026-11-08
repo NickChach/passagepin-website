@@ -1,6 +1,6 @@
-import type { FAQPropsType, QuestionObject } from "@/types";
-import Icon from "../icon/Icon";
-import styles from "./faq.module.css";
+import type { FAQsPropsType, QuestionObject } from "../../types";
+import Question from "../question/Question";
+import styles from "./faqs.module.css";
 
 const questions: QuestionObject[] = [
 	{
@@ -25,9 +25,9 @@ const questions: QuestionObject[] = [
 	},
 ];
 
-export default function FAQ({ repository }: FAQPropsType) {
+export default function FAQs({ repository }: FAQsPropsType) {
 	return (
-		<article className="questions-section container" id="questions" aria-labelledby="questions-title">
+		<article className={`${styles.questionsSection} container`} id="questions" aria-labelledby="questions-title">
 			<div>
 				<h2 id="questions-title" className={styles.h2}>
 					<span>A few things </span>
@@ -41,15 +41,9 @@ export default function FAQ({ repository }: FAQPropsType) {
 					.
 				</p>
 			</div>
-			<div className="questions-list">
+			<div className={styles.questionsList}>
 				{questions.map(({ question, answer }) => (
-					<details key={question}>
-						<summary>
-							{question}
-							<Icon name="plus" size={18} />
-						</summary>
-						<p>{answer}</p>
-					</details>
+					<Question key={question} question={question} answer={answer} />
 				))}
 			</div>
 		</article>
