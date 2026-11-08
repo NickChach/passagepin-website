@@ -85,8 +85,8 @@
 }
 
 .miniFiles {
-	display: flex;
-	justify-content: space-around;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .miniFiles > span {
@@ -103,10 +103,9 @@
 }
 
 .localConnector {
-	display: flex;
-	justify-content: space-around;
 	height: 39px;
-	margin: 12px 40px 0;
+	/* Endpoints share the centres of the first and last file columns. */
+	margin: 12px calc(100% / 6 - 0.5px) 0;
 	border: 1px solid var(--border);
 	border-top: 0;
 	border-radius: 0 0 7px 7px;
@@ -114,6 +113,9 @@
 }
 
 .localConnector span:nth-child(2) {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 	border-left: 1px solid var(--border);
 	height: 55px;
 }
