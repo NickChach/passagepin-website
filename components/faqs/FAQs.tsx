@@ -1,8 +1,8 @@
-import type { FAQsPropsType, QuestionObject } from "../../types";
-import Question from "../question/Question";
+import type { RepositoryProps } from "@/types";
+import Question, { type QuestionProps } from "../question/Question";
 import styles from "./faqs.module.css";
 
-const questions: QuestionObject[] = [
+const questions: QuestionProps[] = [
 	{
 		question: "Does PassagePin need an internet connection?",
 		answer: "The packaged desktop app includes the search model and runtime. After downloading the app, you can index and search your library offline. Your PDF contents and search queries stay on your computer by design.",
@@ -25,7 +25,7 @@ const questions: QuestionObject[] = [
 	},
 ];
 
-export default function FAQs({ repository }: FAQsPropsType) {
+export default function FAQs({ repository }: RepositoryProps) {
 	return (
 		<article className={`${styles.questionsSection} container`} id="questions" aria-labelledby="questions-title">
 			<div>
@@ -41,7 +41,7 @@ export default function FAQs({ repository }: FAQsPropsType) {
 					.
 				</p>
 			</div>
-			<div className={styles.questionsList}>
+			<div>
 				{questions.map(({ question, answer }) => (
 					<Question key={question} question={question} answer={answer} />
 				))}

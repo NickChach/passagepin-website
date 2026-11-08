@@ -154,3 +154,27 @@
 	border-radius: 0 0 12px 12px;
 	margin: 0 -13px;
 }
+
+@media (max-width: 1050px) {
+	.privacyInner {
+		gap: 55px;
+	}
+}
+
+@media (max-width: 760px) {
+	.privacyInner {
+		padding-block: 50px;
+		gap: 45px;
+		grid-template-columns: 1fr;
+	}
+
+	.privacyCopy > p {
+		max-width: 550px;
+	}
+
+	.localIllustration {
+		width: min(100% - 26px, 410px);
+		margin: 0 auto;
+		padding-top: 0;
+	}
+}

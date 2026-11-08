@@ -44,3 +44,49 @@
 	line-height: 1.9;
 	max-width: 310px;
 }
+
+@media (max-width: 760px) {
+	.step {
+		padding-inline: 22px;
+	}
+
+	.step h3 {
+		font-size: 16px;
+	}
+
+	.step p {
+		font-size: 12px;
+	}
+
+	.stepTop {
+		gap: 11px;
+	}
+}
+
+@media (max-width: 480px) {
+	.step,
+	.step:first-child,
+	.step:last-child {
+		padding: 24px 0;
+		border-right: 0;
+		border-bottom: 1px solid var(--border-soft);
+	}
+
+	.step:last-child {
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
+
+	.stepTop {
+		margin-bottom: 13px;
+	}
+
+	.step p {
+		max-width: 100%;
+		font-size: 13px;
+	}
+
+	.step h3 {
+		font-size: 18px;
+	}
+}

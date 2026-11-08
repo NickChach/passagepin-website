@@ -7,7 +7,7 @@ import FAQs from "../components/faqs/FAQs";
 import Download from "../components/download/Download";
 import Footer from "../components/footer/Footer";
 
-const repository: string = "https://github.com/NickChach/passagepin";
+const repository = "https://github.com/NickChach/passagepin";
 
 export default function Home() {
 	return (

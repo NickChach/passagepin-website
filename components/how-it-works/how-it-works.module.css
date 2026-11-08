@@ -2,13 +2,13 @@
 	display: block;
 }
 
-.ol {
+.steps {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	border-top: 1px solid var(--border);
 }
 
-.ol li {
+.steps li {
 	list-style: none;
 }
 
@@ -30,4 +30,28 @@
 	font-size: 14px;
 	max-width: 350px;
 	line-height: 1.85;
+}
+
+@media (max-width: 760px) {
+	.howSection {
+		padding-top: 67px;
+		padding-bottom: 60px;
+	}
+
+	.sectionIntro {
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	.sectionIntro > p {
+		margin-top: 18px;
+		max-width: 440px;
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 480px) {
+	.steps {
+		grid-template-columns: 1fr;
+	}
 }

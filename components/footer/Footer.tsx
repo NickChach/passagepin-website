@@ -1,13 +1,12 @@
-import type { FooterPropsType } from "@/types";
-import Image from "next/image";
+import type { RepositoryProps } from "@/types";
 import styles from "./footer.module.css";
 import Logo from "../logo/Logo";
 
-export default function Footer({ repository }: FooterPropsType) {
+export default function Footer({ repository }: RepositoryProps) {
 	return (
 		<footer className={`${styles.footer} container`}>
 			<a href="#" className="brand">
-				<Logo width={28} height={28} priority={false} />
+				<Logo width={28} height={28} />
 				<span>PassagePin</span>
 			</a>
 			<p>A little closer to what you’re looking for.</p>

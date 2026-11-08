@@ -1,8 +1,15 @@
-import type { HowToStepPropsType } from "@/types";
+import type { IconName } from "@/types";
 import Icon from "../icon/Icon";
 import styles from "./how-to-step.module.css";
 
-export default function HowToStep({ number, name, title, description }: HowToStepPropsType) {
+export type HowToStepProps = {
+	number: number;
+	name: IconName;
+	title: string;
+	description: string;
+};
+
+export default function HowToStep({ number, name, title, description }: HowToStepProps) {
 	return (
 		<li className={styles.step}>
 			<div className={styles.stepTop}>

@@ -1,0 +1,38 @@
+.question {
+	border-bottom: 1px solid var(--border);
+}
+
+.question:first-child {
+	border-top: 1px solid var(--border);
+}
+
+.question summary {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 18px;
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: 500;
+	padding: 20px 0;
+}
+
+.question summary::-webkit-details-marker {
+	display: none;
+}
+
+.question summary > svg {
+	color: var(--subtle);
+}
+
+.question[open] summary > svg {
+	transform: rotate(45deg);
+}
+
+.question > p {
+	font-size: 12px;
+	line-height: 1.9;
+	color: var(--muted);
+	padding: 0 27px 22px 0;
+}

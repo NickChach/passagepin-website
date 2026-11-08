@@ -1,13 +1,10 @@
 import Icon from "../icon/Icon";
-import Logo from "../logo/Logo";
-import MiniFile from "../mini-file/MiniFile";
-import PrivacyPoint from "../privacy-point/PrivacyPoint";
+import PrivacyIllustration from "./PrivacyIllustration";
 import styles from "./privacy.module.css";
 
-export default function Privacy() {
-	const privacyPoints: string[] = ["No document uploads", "No account or API key", "Works offline after download"];
-	const fileTypes: string[] = ["Books", "Papers", "Reports"];
+const privacyPoints = ["No document uploads", "No account or API key", "Works offline after download"];
 
+export default function Privacy() {
 	return (
 		<article className={styles.privacySection} aria-labelledby="privacy-title">
 			<div className={`container ${styles.privacyInner}`}>
@@ -24,42 +21,15 @@ export default function Privacy() {
 						machine, with the search model included in the app.
 					</p>
 					<ul className={styles.privacyPoints}>
-						{privacyPoints.map((privacyPoint) => {
-							return <PrivacyPoint key={privacyPoint} privacyPoint={privacyPoint} />;
-						})}
+						{privacyPoints.map((point) => (
+							<li key={point}>
+								<Icon name="check" size={17} />
+								{point}
+							</li>
+						))}
 					</ul>
 				</section>
-				<section className={styles.localIllustration} aria-label="PDF documents and search stay together on your computer">
-					<div className={styles.localMachine}>
-						<div className={styles.machineTop}>
-							<span className="status-dot" />
-							Your computer
-							<Icon name="lock" size={15} />
-						</div>
-						<div className={styles.machineContent}>
-							<div className={styles.miniFiles}>
-								{fileTypes.map((fileType) => {
-									return <MiniFile key={fileType} type={fileType} />;
-								})}
-							</div>
-							<div className={styles.localConnector} aria-hidden="true">
-								<span />
-								<span />
-								<span />
-							</div>
-							<div className={styles.localApp}>
-								<Logo width={40} height={40} priority={false} />
-								<div>
-									<strong>PassagePin</strong>
-									<span>A search engine for your library</span>
-								</div>
-								<Icon name="search" size={22} />
-							</div>
-							<p>Everything you need. Right here.</p>
-						</div>
-					</div>
-					<div className={styles.machineBase} />
-				</section>
+				<PrivacyIllustration />
 			</div>
 		</article>
 	);

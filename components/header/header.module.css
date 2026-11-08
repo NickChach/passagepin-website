@@ -43,3 +43,34 @@
 	gap: 8px;
 	align-items: center;
 }
+
+@media (max-width: 760px) {
+	.headerInner {
+		height: 74px;
+		gap: 20px;
+	}
+
+	.headerInner nav {
+		gap: 20px;
+		margin: 0 0 0 auto;
+	}
+
+	.headerInner nav a:first-child {
+		display: none;
+	}
+
+	.headerInner :global(.button) {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.headerInner nav {
+		gap: 17px;
+		font-size: 12px;
+	}
+
+	.github {
+		gap: 6px;
+	}
+}
