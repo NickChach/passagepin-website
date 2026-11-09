@@ -9,17 +9,18 @@ export default function Footer({ repository }: RepositoryProps) {
 				<Logo width={28} height={28} />
 				<span>PassagePin</span>
 			</a>
-			<p>A little closer to what you’re looking for.</p>
+			<p>
+				Built by{" "}
+				<a href="https://www.nickchachlioutis.gr" target="_blank">
+					Nova Constant
+				</a>
+			</p>
 			<div>
 				<a href={repository} target="_blank">
 					Source code
 				</a>
 				<a href={`${repository}/blob/main/LICENSE`} target="_blank">
 					MIT License
-				</a>
-				Built by{" "}
-				<a href="https://www.nickchachlioutis.gr" target="_blank">
-					Nova Constant
 				</a>
 			</div>
 		</footer>
