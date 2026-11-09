@@ -1,6 +1,7 @@
 import { Noto_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
+import structuredData from "./structuredData.json";
 import "./globals.css";
 
 const NotoSans = Noto_Sans({
@@ -51,6 +52,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
 	return (
 		<html lang="en" data-scroll-behavior="smooth" className={NotoSans.className}>
+			<head>
+				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+			</head>
 			<body>
 				{children}
 				<Analytics />
