@@ -17,7 +17,7 @@ export default function Header({ repository }: RepositoryProps) {
 				<nav aria-label="Main navigation">
 					<a href="#how-it-works">How it works</a>
 					<a href="#questions">FAQs</a>
-					<a href={repository} className={styles.github}>
+					<a href={repository} className={styles.github} target="_blank">
 						<Icon name="github" size={17} />
 						GitHub
 					</a>

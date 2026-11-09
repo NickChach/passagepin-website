@@ -11,7 +11,7 @@ const NotoSans = Noto_Sans({
 export const metadata: Metadata = {
 	title: "PassagePin | Find the page you had in mind",
 	description:
-		"Search your PDF library by meaning. PassagePin finds relevant pages, keeps your documents on your computer and works offline. Free and open source.",
+		"Search your PDF library by meaning. PassagePin finds relevant pages, keeps your documents on your computer and works offline.",
 	applicationName: "PassagePin",
 	authors: [{ name: "NovaConstant — NickChachlioutis" }],
 	keywords: ["PassagePin", "semantic search", "PDF", "search PDF", "find passage", "find in PDF", "open source", "free software"],
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "PassagePin | Find the page you had in mind",
 		description:
-			"Search your PDF library by meaning. PassagePin finds relevant pages, keeps your documents on your computer and works offline. Free and open source.",
+			"Search your PDF library by meaning. PassagePin finds relevant pages, keeps your documents on your computer and works offline.",
 		url: "https://www.passagepin.com",
 		siteName: "PassagePin",
 		images: [
