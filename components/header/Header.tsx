@@ -22,7 +22,10 @@ export default function Header({ repository }: RepositoryProps) {
 						GitHub
 					</a>
 				</nav>
-				<a className="button button-small" href="#download">
+				<a
+					className="button button-small"
+					href="https://github.com/NickChach/passagepin/releases/download/v1.0.0/PassagePin-1.0.0-x86_64.AppImage"
+				>
 					<Icon name="download" size={16} />
 					Get PassagePin
 				</a>

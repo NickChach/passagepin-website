@@ -18,7 +18,10 @@ export default function Hero() {
 				<p>Search your PDF library by meaning, even when the words escape you.</p>
 			</section>
 			<div className={styles.heroActions}>
-				<a className="button" href="#download">
+				<a
+					className="button"
+					href="https://github.com/NickChach/passagepin/releases/download/v1.0.0/PassagePin-1.0.0-x86_64.AppImage"
+				>
 					<Icon name="download" size={18} />
 					Get PassagePin for Linux
 				</a>
