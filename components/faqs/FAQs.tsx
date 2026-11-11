@@ -13,7 +13,7 @@ const questions: QuestionProps[] = [
 	},
 	{
 		question: "Which languages does it work best with?",
-		answer: "The current search model is intended for English. Other languages will produce results, but their search quality has not been validated.",
+		answer: "The current search model is intended for English. Other languages will produce results, but the search quality may vary.",
 	},
 	{
 		question: "What happens when my files change?",

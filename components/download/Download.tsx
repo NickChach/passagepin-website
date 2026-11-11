@@ -40,7 +40,7 @@ export default function Download({ repository }: RepositoryProps) {
 						<Icon name="download" size={18} />
 						View Linux downloads
 					</a>
-					<p className={styles.systemNote}>Linux x86-64 · glibc 2.38 or newer</p>
+					<p className={styles.systemNote}>Linux x86-64 · FUSE & glibc 2.38 or newer required</p>
 				</div>
 				<div className={styles.downloadDetails}>
 					<h3>Pick the package that suits you.</h3>
